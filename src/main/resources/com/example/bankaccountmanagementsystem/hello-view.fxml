@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.bankaccountmanagementsystem.HelloController">
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="551.0" prefWidth="740.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankaccountmanagementsystem.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
+   <AnchorPane prefHeight="487.0" prefWidth="1304.0">
+      <children>
+         <Text layoutX="239.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" BANK ACCOUNT MANAGEMENT " />
+         <Text layoutX="14.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNT NUMBER" />
+         <Text layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNT HOLDER" />
+         <TextField layoutX="131.0" layoutY="75.0" />
+         <Text layoutX="14.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNT TYPE" />
+         <TextField layoutX="131.0" layoutY="121.0" />
+         <DialogPane layoutX="453.0" layoutY="390.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="137.0">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+            </content>
+            <expandableContent>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+            </expandableContent>
+         </DialogPane>
+         <Line endX="1181.0" endY="11.333358764648438" layoutX="117.0" layoutY="230.0" startX="-116.99998474121094" startY="11.333358764648438" />
+         <AnchorPane layoutX="455.0" layoutY="396.0" minHeight="0.0" minWidth="0.0" prefHeight="49.0" prefWidth="137.0" AnchorPane.bottomAnchor="13.999999999999979" AnchorPane.leftAnchor="455.33333333333326" AnchorPane.rightAnchor="14.333333333333286" AnchorPane.topAnchor="396.0" />
+         <Text layoutX="55.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER DETAILS" />
+         <Text layoutX="438.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INITIAL DEPOSIT AMOUNT" />
+         <TextField layoutX="434.0" layoutY="121.0" />
+         <Text layoutX="92.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPOSIT AMOUNT" />
+         <Text layoutX="433.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WITHDRAW AMOUNT" />
+         <TextField fx:id="amount" layoutX="73.0" layoutY="289.0" />
+         <Text layoutX="14.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" AMOUNT" />
+         <TextField fx:id="amount" layoutX="417.0" layoutY="289.0" />
+         <Text layoutX="355.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" AMOUNT" />
+         <Text layoutX="379.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" AMOUNT" />
+         <Button layoutX="113.0" layoutY="332.0" mnemonicParsing="false" onAction="#deposit" text="DEPOSIT" />
+         <Button layoutX="39.0" layoutY="432.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="SHOW BALANCE" />
+         <Text layoutX="355.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         <Text fx:id="earn" layoutX="192.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="106.564453125" />
+         <Button layoutX="461.0" layoutY="332.0" mnemonicParsing="false" onAction="#withdraw" text="WITHDRAW" />
+         <Text fx:id="ok" layoutX="572.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         <Text fx:id="good" layoutX="327.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="180.50390625" />
+         <Button layoutX="451.0" layoutY="152.0" mnemonicParsing="false" onAction="#createAccount" text="CREATE ACCOUNT" />
+         <Button layoutX="119.0" layoutY="161.0" mnemonicParsing="false" text="SAVINGS" />
+         <Button layoutX="199.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="CURRENT ACC" />
+         <Button layoutX="134.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="FIXED DEPOSIT ACC" />
+      </children>
+   </AnchorPane>
 </VBox>
